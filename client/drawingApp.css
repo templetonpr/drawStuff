@@ -1,1 +1,4 @@
-
+#canvas {
+  border: 1px #000000 dotted;
+  min-width: 100%;
+}

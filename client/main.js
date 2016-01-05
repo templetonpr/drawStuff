@@ -19,7 +19,7 @@ Meteor.startup(function () {
   });
 });
 
-Template.wall.events({
+Template.palette.events({
 
   "click button.clear": function (event) {
     Meteor.call('clear', function () {
@@ -32,6 +32,7 @@ Template.wall.events({
   "click button.red": function (event) {
     lastX = 0;
     lastY = 0;
+    console.log("Clicked red button");
     strokeColor = "red";
   },
 
