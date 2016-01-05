@@ -12,7 +12,6 @@ Meteor.startup(function () {
 
   Deps.autorun(function () {
     var data = Points.find({}).fetch();
-
     if (canvas) {
       canvas.draw(data);
     }
@@ -32,45 +31,158 @@ Template.palette.events({
   "click button.red": function (event) {
     lastX = 0;
     lastY = 0;
-    console.log("Clicked red button");
     strokeColor = "red";
+    console.log("StrokeColor: " + strokeColor);
   },
 
   "click button.black": function (event) {
     lastX = 0;
     lastY = 0;
     strokeColor = "black";
+    console.log("StrokeColor: " + strokeColor);
   },
 
   "click button.white": function (event) {
     lastX = 0;
     lastY = 0;
     strokeColor = "white";
+    console.log("StrokeColor: " + strokeColor);
   },
 
   "click button.blue": function (event) {
     lastX = 0;
     lastY = 0;
     strokeColor = "blue";
+    console.log("StrokeColor: " + strokeColor);
   },
 
   "click button.green": function (event) {
     lastX = 0;
     lastY = 0;
     strokeColor = "green";
+    console.log("StrokeColor: " + strokeColor);
+  },
+
+  "click button.yellow": function (event) {
+    lastX = 0;
+    lastY = 0;
+    strokeColor = "yellow";
+    console.log("StrokeColor: " + strokeColor);
+  },
+
+  "click button.orange": function (event) {
+    lastX = 0;
+    lastY = 0;
+    strokeColor = "orange";
+    console.log("StrokeColor: " + strokeColor);
+  },
+
+  "click button.purple": function (event) {
+    lastX = 0;
+    lastY = 0;
+    strokeColor = "purple";
+    console.log("StrokeColor: " + strokeColor);
+  },
+  
+  "click button.cyan": function (event) {
+    lastX = 0;
+    lastY = 0;
+    strokeColor = "cyan";
+    console.log("StrokeColor: " + strokeColor);
+  },
+  
+  "click button.goldenrod": function (event) {
+    lastX = 0;
+    lastY = 0;
+    strokeColor = "goldenrod";
+    console.log("StrokeColor: " + strokeColor);
+  },
+  
+  "click button.fuchsia": function (event) {
+    lastX = 0;
+    lastY = 0;
+    strokeColor = "fuchsia";
+    console.log("StrokeColor: " + strokeColor);
+  },
+  
+  "click button.lime": function (event) {
+    lastX = 0;
+    lastY = 0;
+    strokeColor = "lime";
+    console.log("StrokeColor: " + strokeColor);
+  },
+  
+  "click button.maroon": function (event) {
+    lastX = 0;
+    lastY = 0;
+    strokeColor = "maroon";
+    console.log("StrokeColor: " + strokeColor);
+  },
+  
+  "click button.olive": function (event) {
+    lastX = 0;
+    lastY = 0;
+    strokeColor = "olive";
+    console.log("StrokeColor: " + strokeColor);
+  },
+  
+  "click button.orchid": function (event) {
+    lastX = 0;
+    lastY = 0;
+    strokeColor = "orchid";
+    console.log("StrokeColor: " + strokeColor);
+  },
+  
+  "click button.slategray": function (event) {
+    lastX = 0;
+    lastY = 0;
+    strokeColor = "slategray";
+    console.log("StrokeColor: " + strokeColor);
+  },
+
+  "blur #customColor": function (event) {
+    lastX = 0;
+    lastY = 0;
+    strokeColor = event.target.value;
+    console.log("StrokeColor: " + strokeColor);
   },
 
   "click button.thicker": function (event) {
-
+    lastX = 0;
+    lastY = 0;
     thickness += 1;
+    console.log("Line thickness: " + thickness);
 
   },
 
-  "click button.thinner": function (event) {
+  "click .brush-small": function (event) {
+    lastX = 0;
+    lastY = 0;
+    thickness = 1;
+    console.log("Line thickness: " + thickness);
+  },
 
+  "click .brush-medium": function (event) {
+    lastX = 0;
+    lastY = 0;
+    thickness = 5;
+    console.log("Line thickness: " + thickness);
+  },
+
+  "click .brush-large": function (event) {
+    lastX = 0;
+    lastY = 0;
+    thickness = 10;
+    console.log("Line thickness: " + thickness);
+  },
+
+  "click button.thinner": function (event) {
+    lastX = 0;
+    lastY = 0;
     if (thickness > 0) {
       thickness -= 1;
     }
+    console.log("Line thickness: " + thickness);
   }
 
 });
@@ -125,25 +237,25 @@ var markPoint = function (event) {
 };
 
 Template.canvas.events({
-  
+
   'click': function (event) {
     markPoint(event);
   },
-  
+
   'mousedown': function (event) {
     Session.set('draw', true);
   },
-  
+
   'mouseup': function (event) {
     Session.set('draw', false);
     lastX = 0;
     lasyY = 0;
   },
-  
+
   'mousemove': function (event) {
     if (Session.get('draw')) {
       markPoint(event);
     }
   }
-  
+
 });

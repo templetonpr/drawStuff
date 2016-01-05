@@ -1,62 +1,92 @@
 <template name="palette">
- 
-  <div class="row">
-    <h3>Brushes</h3>
+  <div id="palette">
+
+
+    <div class="row">
+      <div class="col-xs-12">
+        <h3 class="text-center">Options</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-2 col-sm-6">
+        <button class='clear'>Clear</button>
+      </div>
+      <div class="col-xs-2 col-sm-6">
+        <button class='brush-small'>Small Brush</button>
+      </div>
+      <div class="col-xs-2 col-sm-6">
+        <button class='brush-medium'>Medium Brush</button>
+      </div>
+      <div class="col-xs-2 col-sm-6">
+        <button class='brush-large'>Large Brush</button>
+      </div>
+      <div class="col-xs-2 col-sm-6">
+        <button class='thinner'>Thinner</button>
+      </div>
+      <div class="col-xs-2 col-sm-6">
+        <button class='thicker'>Thicker</button>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-12">
+        <h3 class="text-center">Colors</h3>
+      </div>
+    </div>
+    <div class="row">
+      <!-- color buttons -->
+      <div class="col-xs-2 col-sm-6">
+        <button class='black'>Black</button>
+      </div>
+      <div class="col-xs-2 col-sm-6">
+        <button class='white'>White</button>
+      </div>
+      <div class="col-xs-2 col-sm-6">
+        <button class='red'>Red</button>
+      </div>
+      <div class="col-xs-2 col-sm-6">
+        <button class='blue'>Blue</button>
+      </div>
+      <div class="col-xs-2 col-sm-6">
+        <button class='green'>Green</button>
+      </div>
+      <div class="col-xs-2 col-sm-6">
+        <button class='yellow'>Yellow</button>
+      </div>
+      <div class="col-xs-2 col-sm-6">
+        <button class='orange'>Orange</button>
+      </div>
+      <div class="col-xs-2 col-sm-6">
+        <button class='purple'>Purple</button>
+      </div>
+      <div class="col-xs-2 col-sm-6">
+        <button class='cyan'>Cyan</button>
+      </div>
+      <div class="col-xs-2 col-sm-6">
+        <button class='goldenrod'>GoldenRod</button>
+      </div>
+      <div class="col-xs-2 col-sm-6">
+        <button class='fuchsia'>Fuchsia</button>
+      </div>
+      <div class="col-xs-2 col-sm-6">
+        <button class='lime'>Lime</button>
+      </div>
+      <div class="col-xs-2 col-sm-6">
+        <button class='maroon'>Maroon</button>
+      </div>
+      <div class="col-xs-2 col-sm-6">
+        <button class='olive'>Olive</button>
+      </div>
+      <div class="col-xs-2 col-sm-6">
+        <button class='orchid'>Orchid</button>
+      </div>
+      <div class="col-xs-2 col-sm-6">
+        <button class='slategray'>Slate Gray</button>
+      </div>
+
+      <div class="col-xs-12 col-sm-12">
+        <input type="color" id="customColor" />
+      </div>
+    </div>
   </div>
-  <div class="row">
-    <div class="col-xs-2">
-      <button class='clear'>Clear</button>
-    </div>
-    <div class="col-xs-2">
-      <button class='brush-small'>Small Brush</button>
-    </div>
-    <div class="col-xs-2">
-      <button class='brush-medium'>Medium Brush</button>
-    </div>
-    <div class="col-xs-2">
-      <button class='brush-large'>Large Brush</button>
-    </div>
-    <div class="col-xs-2">
-      <button class='thinner'>Thinner</button>
-    </div>
-    <div class="col-xs-2">
-      <button class='thicker'>Thicker</button>
-    </div>
-  </div>
-  
-  <div class="row">
-    <h3>Colors</h3>
-  </div>
-  <div class="row">
-    <!-- color buttons -->
-    <div class="col-xs-2 col-sm-6">
-      <button class='red'>Red</button>
-    </div>
-    <div class="col-xs-2 col-sm-6">
-      <button class='blue'>Blue</button>
-    </div>
-    <div class="col-xs-2 col-sm-6">
-      <button class='green'>Green</button>
-    </div>
-    <div class="col-xs-2 col-sm-6">
-      <button class=''>color</button>
-    </div>
-    <div class="col-xs-2 col-sm-6">
-      <button class=''>color</button>
-    </div>
-    <div class="col-xs-2 col-sm-6">
-      <button class=''>color</button>
-    </div>
-    <div class="col-xs-2 col-sm-6">
-      <button class='black'>Black</button>
-    </div>
-    <div class="col-xs-2 col-sm-6">
-      <button class='white'>White</button>
-    </div>
-  </div>
-  <div class="row">
-    <!-- custom color picker -->
-    <p>custom color picker goes here</p>
-  </div>
-  
 </template>

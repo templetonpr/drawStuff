@@ -1,13 +1,13 @@
 <template name="ApplicationLayout">
-    {{> yield "header"}}
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12 col-sm-2">
-                {{> yield "palette"}}
-            </div>
-            <div class="col-xs-12 col-sm-10">
-                {{> yield "canvas"}}
-            </div>
-        </div>
+  {{> yield "header"}}
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-3">
+        {{> yield "palette"}}
+      </div>
+      <div class="col-xs-12 col-sm-9">
+        {{> yield "canvas"}}
+      </div>
     </div>
+  </div>
 </template>

@@ -1,4 +1,10 @@
 #canvas {
-  border: 1px #000000 dotted;
-  min-width: 100%;
+  border: 2px #222222 solid;
+  border-radius: 5px;
+}
+
+#palette {
+  border: 2px #222222 solid;
+  border-radius: 5px;
+  padding: 10px;
 }
