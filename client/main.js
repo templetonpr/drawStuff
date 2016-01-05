@@ -1,4 +1,3 @@
-points = new Meteor.Collection('pointsCollection');
 var canvas;
 
 // we use these for drawing more interesting shapes
@@ -12,7 +11,7 @@ Meteor.startup(function () {
   canvas = new Canvas();
 
   Deps.autorun(function () {
-    var data = points.find({}).fetch();
+    var data = Points.find({}).fetch();
 
     if (canvas) {
       canvas.draw(data);
@@ -87,7 +86,7 @@ var markPoint = function (event) {
     lastX = (event.pageX - offset.left);
     lastY = (event.pageY - offset.top);
   }
-  points.insert({
+  Points.insert({
     //this draws a point exactly where you click the mouse
     // x: (event.pageX - offset.left),
     // y: (event.pageY - offset.top)});
@@ -117,7 +116,7 @@ var markPoint = function (event) {
     c: strokeColor,
 
 
-  }); // end of points.insert()
+  }); // end of Points.insert()
 
   lastX = (event.pageX - offset.left);
   lastY = (event.pageY - offset.top);
