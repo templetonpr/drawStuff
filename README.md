@@ -1,43 +1,39 @@
 # Minstant
 
-Minstant is an instant messaging webapp for the <a href="https://www.coursera.org/learn/web-application-development/">Web Application Development with JavaScript and MongoDB</a> course on Coursera.
+drawStuff is an online colaborative drawing webapp for the <a href="https://www.coursera.org/learn/responsive-website-examples/">Responsive Website Tutorial and Examples</a> course on Coursera.
 
 Created with <a href="https://www.meteor.com/">Meteor.</a>
 
 ---
 
 ## Assignment instructions
-  In this peer assessment you will be working on an instant messaging app called minstant!
-  You are provided with a working starter application and you have to use the skills you have learned in the course to improve the application in various ways.
-  You should download and run the starter application, then test it out by logging in as different users in two different web browsers at the same time, and seeing if the users can talk to each other. It creates a set of test user accounts automatically, so you can log in as user1@test.com ... user8@test.com with the password test123.
+
+You are to extend one of the two examples we have explored so far - EITHER the collaborative drawing web app example OR the data visualisation website example, in order to produce a simple, yet usable, finished website. Your website must take advantage of dynamic content creation.
+
+Your website must extend the example, adding data and features in the case of the data visualisation example, or adding collaborative drawing features in the case of the web application.
+
+The site can have any number of pages as long as there is a clear purpose for each one. It must have the following features:
 
 ---
 
-## Tasks
+- Clear navigation allowing the user to move between pages and locate relevant information
 
-### 1. Improve the look and feel
-   - Adapt the templates and helper functions so that the messaging window displays users’ avatars next to their messages. Feel free to add other enhancements!
+- Consistent style across the pages through use of css
 
-### 2. Implement data writing security
-   - Remove the insecure package from the application and implement a Meteor method to allow the insertion of chat items in the Chats collection. Test that you cannot insert items directly any more.
+- Responsive layout where the layout changes depending on the size of the browser window
 
-### 3. Implement data reading security
-   - Remove the autopublish package from the application and implement publish and subscribe for Chats. Users should only be able to retrieve chats that have their user id in either the user1Id field or the user2Id field. Test by logging in as different users and checking what you can see.
+- Use of Bootstrap
 
-### 4. Challenge: Implement emoticons
-   - Can you implement emoticon functionality which allows the user to insert graphical emoticons into their message? Emoticons are small icons such as smiley faces which are typical of this kind of application.
+- Clearly stated purpose for each page.
+
+- Clear landing page
+
+- ONLY If you are making the collaborative drawing app: it should allow the user to specify at least 16 colours, 3 drawing methods (e.g. different brushes, line thickness, or other style feature) and a save or export function.
+
+- ONLY If you are making a data visualisation app : it should use data from a different source (i.e. not the music data), visualise it in at least on three ways not covered in the example (using viz.js), and be interactive in some way. 
 
 ---
 
 ## Review criteria
-Your work will be reviewed by people using it and testing out the security in the browser console. Reviewers will be instructed to check that each of the required things have been implemented. 70% of the mark is available for the three main tasks. 30% extra can be gained by attempting the challenge. The mark is broken down as follows:
 
-| Points | Task |
-|--------|------|
-| 10% | Submit a working link |
-| 20% | Implement well laid out avatars in chat window |
-| 20% | Implement methods to prevent direct inserts |
-| 20% | Implement publish and subscribe to prevent users seeing conversations they were not involved in |
-| 30% | Implement challenge |
-
-* The pass mark is 60%. 
+You will be evaluated based on whether your site is complete, functional, and adheres to the feature requirements listed in the instructions.
