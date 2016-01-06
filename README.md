@@ -1,4 +1,4 @@
-# Minstant
+# drawStuff
 
 drawStuff is an online colaborative drawing webapp for the <a href="https://www.coursera.org/learn/responsive-website-examples/">Responsive Website Tutorial and Examples</a> course on Coursera.
 
