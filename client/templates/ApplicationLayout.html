@@ -1,5 +1,46 @@
 <template name="ApplicationLayout">
+ 
   {{> yield "header"}}
+  
+  <div class="modal fade about-modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h1>drawStuff</h1>
+        </div>
+        <div class="modal-body">
+          <article>
+            <p>drawStuff is an online colaborative drawing webapp for the <a href="https://www.coursera.org/learn/responsive-website-examples/">Responsive Website Tutorial and Examples</a> course on Coursera.</p>
+            <p>Created with <a href="https://www.meteor.com/">Meteor.</a></p>
+          </article>
+          <hr>
+          <article>
+            <h2>Assignment instructions</h2>
+            <p>You are to extend one of the two examples we have explored so far - EITHER the collaborative drawing web app example OR the data visualisation website example, in order to produce a simple, yet usable, finished website. Your website must take advantage of dynamic content creation.</p>
+            <p>Your website must extend the example, adding data and features in the case of the data visualisation example, or adding collaborative drawing features in the case of the web application.</p>
+            <p>The site can have any number of pages as long as there is a clear purpose for each one. It must have the following features:</p>
+            <ul>
+              <li>Clear navigation allowing the user to move between pages and locate relevant information</li>
+              <li>Consistent style across the pages through use of css</li>
+              <li>Responsive layout where the layout changes depending on the size of the browser window</li>
+              <li>Use of Bootstrap</li>
+              <li>Clearly stated purpose for each page.</li>
+              <li>Clear landing page</li>
+              <li>ONLY If you are making the collaborative drawing app: it should allow the user to specify at least 16 colours, 3 drawing methods (e.g. different brushes, line thickness, or other style feature) and a save or export function.</li>
+              <li>ONLY If you are making a data visualisation app : it should use data from a different source (i.e. not the music data), visualise it in at least on three ways not covered in the example (using viz.js), and be interactive in some way.</li>
+            </ul>
+            <h2>Review criteria</h2>
+            <p>You will be evaluated based on whether your site is complete, functional, and adheres to the feature requirements listed in the instructions.</p>
+          </article>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary btn-block" data-dismiss="modal">Got it!</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
   <div class="container">
     <div class="row" id="parentRow">
       <div class="col-xs-12 col-sm-3">
