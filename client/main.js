@@ -12,7 +12,7 @@ var canvasHeight = 475; // This will eventually change based on screen size
 Meteor.startup(function () {
   canvas = new Canvas(canvasWidth, canvasHeight);
   setTimeout(function () {
-    canvas.createSvg(canvasWidth,canvasHeight);
+    canvas.createSvg(canvasWidth, canvasHeight);
   }, 100);
 
   Deps.autorun(function () {
@@ -21,6 +21,17 @@ Meteor.startup(function () {
       canvas.draw(data);
     }
   });
+});
+
+Template.ApplicationLayout.events({
+
+  "click button#getSVG": function (event) { // put SVG data into #exportBox
+    $('#exportBox').text($("#canvas").html());
+  },
+
+  "click button#clearSVG": function (event) { // remove contents from #exportBox
+    $('#exportBox').text("");
+  }
 });
 
 Template.palette.events({

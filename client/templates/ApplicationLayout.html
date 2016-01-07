@@ -1,7 +1,7 @@
 <template name="ApplicationLayout">
- 
+
   {{> yield "header"}}
-  
+
   <div class="modal fade about-modal" tabindex="-1" role="dialog">
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
@@ -40,7 +40,26 @@
       </div>
     </div>
   </div>
-  
+
+  <div class="modal fade export-modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h1>SVG Export</h1>
+        </div>
+        <div class="modal-body">
+          <button class="btn btn-default btn-block" id="getSVG">Get SVG</button>
+          <button class="btn btn-default btn-block" id="clearSVG">Clear SVG</button>
+          <code id="exportBox"></code>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary btn-block" data-dismiss="modal">Got it!</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="container">
     <div class="row" id="parentRow">
       <div class="col-xs-12 col-sm-3">
