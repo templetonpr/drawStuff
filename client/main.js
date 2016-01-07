@@ -4,11 +4,16 @@ var canvas;
 var lastX = 0;
 var lastY = 0;
 var strokeWidth = 1;
-var thickness = 1;
-var strokeColor = "black";
+var thickness = 5;
+var strokeColor = "#000000";
+var canvasWidth = 800; // This will eventually change based on screen size
+var canvasHeight = 475; // This will eventually change based on screen size
 
 Meteor.startup(function () {
-  canvas = new Canvas();
+  canvas = new Canvas(canvasWidth, canvasHeight);
+  setTimeout(function () {
+    canvas.createSvg(canvasWidth,canvasHeight);
+  }, 100);
 
   Deps.autorun(function () {
     var data = Points.find({}).fetch();
@@ -31,112 +36,112 @@ Template.palette.events({
   "click button.red": function (event) {
     lastX = 0;
     lastY = 0;
-    strokeColor = "red";
+    strokeColor = "#ff0000";
     console.log("StrokeColor: " + strokeColor);
   },
 
   "click button.black": function (event) {
     lastX = 0;
     lastY = 0;
-    strokeColor = "black";
+    strokeColor = "#000000";
     console.log("StrokeColor: " + strokeColor);
   },
 
   "click button.white": function (event) {
     lastX = 0;
     lastY = 0;
-    strokeColor = "white";
+    strokeColor = "#ffffff";
     console.log("StrokeColor: " + strokeColor);
   },
 
   "click button.blue": function (event) {
     lastX = 0;
     lastY = 0;
-    strokeColor = "blue";
+    strokeColor = "#0000ff";
     console.log("StrokeColor: " + strokeColor);
   },
 
   "click button.green": function (event) {
     lastX = 0;
     lastY = 0;
-    strokeColor = "green";
+    strokeColor = "#008000";
     console.log("StrokeColor: " + strokeColor);
   },
 
   "click button.yellow": function (event) {
     lastX = 0;
     lastY = 0;
-    strokeColor = "yellow";
+    strokeColor = "#ffff00";
     console.log("StrokeColor: " + strokeColor);
   },
 
   "click button.orange": function (event) {
     lastX = 0;
     lastY = 0;
-    strokeColor = "orange";
+    strokeColor = "#ffa500";
     console.log("StrokeColor: " + strokeColor);
   },
 
   "click button.purple": function (event) {
     lastX = 0;
     lastY = 0;
-    strokeColor = "purple";
+    strokeColor = "#800080";
     console.log("StrokeColor: " + strokeColor);
   },
-  
+
   "click button.cyan": function (event) {
     lastX = 0;
     lastY = 0;
-    strokeColor = "cyan";
+    strokeColor = "#00ffff";
     console.log("StrokeColor: " + strokeColor);
   },
-  
+
   "click button.goldenrod": function (event) {
     lastX = 0;
     lastY = 0;
-    strokeColor = "goldenrod";
+    strokeColor = "#daa520";
     console.log("StrokeColor: " + strokeColor);
   },
-  
+
   "click button.fuchsia": function (event) {
     lastX = 0;
     lastY = 0;
-    strokeColor = "fuchsia";
+    strokeColor = "#ff00ff";
     console.log("StrokeColor: " + strokeColor);
   },
-  
+
   "click button.lime": function (event) {
     lastX = 0;
     lastY = 0;
-    strokeColor = "lime";
+    strokeColor = "#00ff00";
     console.log("StrokeColor: " + strokeColor);
   },
-  
+
   "click button.maroon": function (event) {
     lastX = 0;
     lastY = 0;
-    strokeColor = "maroon";
+    strokeColor = "#800000";
     console.log("StrokeColor: " + strokeColor);
   },
-  
+
   "click button.olive": function (event) {
     lastX = 0;
     lastY = 0;
-    strokeColor = "olive";
+    strokeColor = "#808000";
     console.log("StrokeColor: " + strokeColor);
   },
-  
+
   "click button.orchid": function (event) {
     lastX = 0;
     lastY = 0;
-    strokeColor = "orchid";
+    strokeColor = "#da70d6";
     console.log("StrokeColor: " + strokeColor);
   },
-  
+
   "click button.slategray": function (event) {
     lastX = 0;
     lastY = 0;
-    strokeColor = "slategray";
+    strokeColor = "#708090";
     console.log("StrokeColor: " + strokeColor);
   },
 

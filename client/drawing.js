@@ -1,17 +1,24 @@
-Canvas = function () {
+Canvas = function (dWidth, dHeight) {
   var self = this;
+  var defaultWidth = dWidth;
+  var defaultHeight = dHeight;
   var svg;
 
-  var createSvg = function () {
+  var createSvg = function (width, height) {
     svg = d3.select('#canvas').append('svg')
-      .attr('width', 800)
-      .attr('height', 600);
+      .attr('width', width)
+      .attr('height', height);
   };
-  createSvg();
+
+  self.createSvg = function (w, h) {
+    createSvg(w, h);
+  }
+
+  // createSvg(defaultWidth, defaultHeight);
 
   self.clear = function () {
     d3.select('svg').remove();
-    createSvg();
+    createSvg(defaultWidth, defaultHeight);
   };
 
   self.draw = function (data) {
